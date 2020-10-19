@@ -20,8 +20,10 @@ Steps:
 # Architechture Diagram
 ![hackathondiagram.PNG]
 
+# More information can be found in our about section: 
 
 
+https://hazardhackers.web.app/about
 
 
 
