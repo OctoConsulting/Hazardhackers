@@ -1,0 +1,31 @@
+<div class="imageResults">
+    <mat-card *ngIf="imageResults.length > 0" class="img-card">
+        <img class="img" [src]="imageResults[pageIndex].image" >
+    </mat-card>
+    
+    <mat-card *ngIf="imageResults.length > 0" class="data-card"> 
+        <mat-card-title class="large-title">Results:</mat-card-title>
+
+        <mat-card-title class="result-title">Category:</mat-card-title>
+        <mat-card-subtitle> {{imageResults[pageIndex].type}} </mat-card-subtitle>
+
+        <mat-card-title class="result-title">Hazard:</mat-card-title>
+        <mat-card-subtitle *ngIf="imageResults[pageIndex].data.passed"> No hazards detected. </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="(!imageResults[pageIndex].data.passed) && imageResults[pageIndex].type==='Face Masks'"> 
+            {{imageResults[pageIndex].data.people_fail}} People detected not wearing a face mask.
+        </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="(!imageResults[pageIndex].data.passed) && imageResults[pageIndex].type==='Hard Hats'"> 
+            {{imageResults[pageIndex].data.people_fail}} People detected not wearing a hard hat.
+        </mat-card-subtitle>
+
+        <mat-card-title class="result-title">Corrective Action:</mat-card-title>
+        <mat-card-subtitle *ngIf="imageResults[pageIndex].data.passed"> No corrective actions required. </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="!imageResults[pageIndex].data.passed && imageResults[pageIndex].type==='Face Masks'"> 
+            Provide proper PPE.
+        </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="!imageResults[pageIndex].data.passed && imageResults[pageIndex].type==='Hard Hats'"> 
+            Provide proper safety gear.
+        </mat-card-subtitle>
+
+    </mat-card>
+</div>

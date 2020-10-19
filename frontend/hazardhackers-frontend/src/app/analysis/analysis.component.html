@@ -1,0 +1,29 @@
+
+<div *ngIf="showAlert" class="alert alert-danger" role="alert">
+    Some of your images were not able to be analyzed. Please try them again: {{retryList}}
+</div>
+<div class="analysis-page">
+
+    <div class="spinner" *ngIf="isAnalyzing">
+        <mat-spinner class="mat-spinner" diameter="50"></mat-spinner>
+        <h2 *ngIf="fileNames.length == 1">Analyzing {{fileNames.length}} Image</h2>
+        <h2 *ngIf="fileNames.length > 1">Analyzing {{fileNames.length}} Images</h2>
+    </div>
+    
+
+    <div *ngIf="!isAnalyzing"> 
+        <app-results-component [imageResults]="imageResults" [pageIndex]="pageIndex"></app-results-component>
+    </div>
+
+    <mat-paginator class="paginator" *ngIf="imageResults.length > 1"
+        [length]=imageResults.length
+        [pageSize]=1
+        [hidePageSize]=true
+        (page)="pageEvent($event)">
+    </mat-paginator>
+    
+</div>
+
+
+
+

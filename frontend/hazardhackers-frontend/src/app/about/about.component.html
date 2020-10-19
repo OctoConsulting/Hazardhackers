@@ -1,0 +1,63 @@
+<div class="example-action-buttons">
+  <button mat-button (click)="accordion.openAll()">Expand All</button>
+  <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+</div>
+<!-- #docregion multi -->
+<mat-accordion  multi>
+<!-- #enddocregion multi -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        Background Information:
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="content">Construction sites are inherently high-risk environments with a lot of coordinated moving parts.
+      According to the Bureau of labor, the amount of nonfatal injuries in the United States for 2018 was 195,600 in construction.
+      However, the average cost of recovery, such as medical and losses in wages, amounted to $27,000 per case. Workers may have to
+      take unpaid leave to recover, or may be unable to return to work due to an accident.</p>
+    <p class="content">In safety, there are three major ways to tackle a perceived problem, prevention, mitigation, and detection.
+      Workplace inspectors have the tough job of identifying and reporting workplace incidents after the fact. But what if we told you
+      that there’s a way to detect the problem before it happens using artificial intelligence?</p>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        The creators:
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="content">Chris Lange</p>
+    <p class="content">Ayush Dev</p>
+    <p class="content">Meredith Lee </p>
+    <p class="content">Veeda Sherzadah</p>
+    <p class="content">Meenu Rajendraprasad</p>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        The Solution:
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="content">A machine learning, artificial intelligence driven, user friendly application that is easy to understand and run on your computer.</p>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        Description of Solution:
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p class="content">A user navigates to the webpage, uploads a EULA pdf or word doc via drag and drop or via the upload button, the document is processed using our AI/ML pipeline, and then the user is presented with a results page which contains the original document and cards containing the clause, the percent acceptable score, and the classification of acceptable or unacceptable.</p>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        Architecture Diagram
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <img [src]="imgSrc" class="image">
+  </mat-expansion-panel>
+
+</mat-accordion>

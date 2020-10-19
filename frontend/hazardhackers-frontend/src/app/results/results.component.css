@@ -1,0 +1,46 @@
+/* page content */
+.imageResults{
+    padding-top:5%;
+    width:100%;
+    height:80%
+}
+.img-card{
+    /* width: 60%; */
+    max-width: 60%;
+    width:auto;
+    display: inline-block;
+    height: 90%;
+}
+.img{
+    width:100%;
+    height: 100%;
+}
+.data-card{
+    width:30%;
+    display: inline-block;
+    vertical-align: top;
+    height: 90%;
+    margin-left: 2%;
+}
+
+
+
+/* text */
+.large-title{
+    font-size:30px;
+    padding-bottom: 10%;
+
+}
+.result-title{
+    font-size: 20px;
+    padding-top:1%;
+}
+.subtitle{
+    padding-top:10%;
+}
+mat-card-subtitle{
+    padding-top:2%;
+    font-size:25px;
+    padding-bottom:5%;
+}
+

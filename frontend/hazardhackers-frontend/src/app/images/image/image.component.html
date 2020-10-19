@@ -1,0 +1,40 @@
+<div class="image-page" *ngIf="isSubmitted===false">
+<div class="card" >
+  <div class="card-body">
+      <h1 class="title">Upload Image</h1>
+    <form [formGroup]="imageForm" (ngSubmit)="onSubmit()">
+      <div class="text-center">
+        <img [src]="imgSrc" class="image" (click)="fileUploader.click()">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="file" multiple accept="image/*" class="form-control" #fileUploader formControlName="imageUrl"
+          (change)="showPreview($event)">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required.
+        </div>
+      </div>
+      <div *ngIf="fileNames.length > 0">Files:</div>
+      <div *ngFor="let name of fileNames">
+        {{name}}
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Detection Category:</label>
+        <select formControlName="category" class="form-control">
+          <option value="hardHat">Hard Hats</option>
+          <option value="mask">Face Masks</option>
+        </select>
+      </div>
+      <div class="form-row" style="padding-left: 25%;">
+        <div class="form-group col-md-8">
+          <button [disabled]="!imageForm.valid" type="submit" class="btn btn-block float-center" style="background-color: #20356A; color: white">Analyze</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="analysis-page" *ngIf="isSubmitted===true">
+<app-analysis [fileNames]="fileNames" [bucketName]='bucketName'></app-analysis>
+</div>

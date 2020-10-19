@@ -1,0 +1,16 @@
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content {
+  width: 60rem;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.image{
+  align-content: center;
+  max-width:3000px;
+  width: auto;
+}

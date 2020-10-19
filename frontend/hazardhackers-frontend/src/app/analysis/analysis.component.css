@@ -1,0 +1,29 @@
+.analysis-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    position:relative;
+    height: 100%;
+    background-color: #F8F9FB;
+}
+
+.spinner{
+    padding-top: 100%;
+}
+.spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: 	#f38832;
+}
+.mat-spinner{
+    margin:0 auto;
+}
+
+/* paginator */
+.paginator{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F8F9FB; 
+    bottom: 10%;
+}

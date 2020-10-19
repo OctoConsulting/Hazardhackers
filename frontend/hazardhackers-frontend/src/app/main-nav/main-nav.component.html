@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="menu-title" style="background-color: #20356A; color:white;">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a class="list-titles" mat-list-item [routerLink]="['/home']"><mat-icon aria-label="home">home</mat-icon>&nbsp; Home</a>
+      <a class="list-titles" mat-list-item [routerLink]="['/about']">About</a>
+      <a class="list-titles" mat-list-item (click) = "imageAnalysis()">Image Analysis</a>
+      <a class="list-titles" mat-list-item (click) = "processImages()">Processed Images</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: #20356A; color: white;">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="main-title">Hazard Hackers</span>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

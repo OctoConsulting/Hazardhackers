@@ -1,0 +1,8 @@
+.image-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+  position:relative;
+  height: 60%;
+}
