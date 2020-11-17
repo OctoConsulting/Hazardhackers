@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   outputUrl: 'https://hack-input.s3.us-east-1.amazonaws.com/',
-  accessKeyId: 'AKIA3JFROOJOE2Z5OMPZ',
-  secretAccessKey: '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',
+  accessKeyId: 'AKIA3JFROOJOJMTHRZNA',
+  secretAccessKey: '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',
   region: 'us-east-1'
 
 
